@@ -1,13 +1,14 @@
 # ggiz.statistic.consumer.agent
 
 ## Dependências 
-Pessoal, deveria tratar melhor o mecanismo de dependência do projeto. Mas esta versão precisa ser feito de forma manual a inclusão dos pacotes. Esse projeto utiliza o pacote ***github.com/streadway/amqp*** como dependência para interação com o Ambiente RabbitMQ.
+Pessoal, deveria tratar melhor o mecanismo de dependência do projeto. Mas esta versão precisa ser feito de forma manual a inclusão dos pacotes. Esse projeto utiliza o pacote ***github.com/streadway/amqp*** como dependência para interação com o Ambiente RabbitMQ. E para o envio de SMS, o pacote ***github.com/Pinablink/g2ssms/send***.
 
 ## Apresentação
 Microsistema embarcado em um RaspberryPI que recebe um estimulo temporal com solicitação de execução de serviço. Esse serviço obtêm dados no ambiente RabbitMQ. Com esses dados, realiza uma segunda consulta a um serviço de terceiro. Então, formata os dados que contêm informações sobre as visitas realizadas na semana no WebClient do GGIZ. Em seguida esses dados são enviados ao microserviço Spring Boot que persiste essa informação na base MariaDB do GGIZ.
 
 ## Fluxo Simplificado do Sistema
 
+![Alt text](FluxoRaspStatistic.png)
 
 
 ## Sobre o Código Fonte
